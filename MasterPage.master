@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" type="text/css" href="css/bootstrap1.css" />
+
+      
+     
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+        <![endif]-->
+        
+        
+        
+
+    <title>Trakya Üniversitesi Sınav Derslik Sistemi</title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+  
+    </asp:ContentPlaceHolder>
+ <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
+  <h1 style="font-family: 'Habibi', serif; color: #696060;" > &nbsp SINAV DERSLİK OTOMASYONU</h1>
+</head>
+<body>
+    <style> body {
+    background-image: url("../images/photography.png");
+    background-color: #cccccc;
+    h1 {
+    color: #000000;
+
+}</style>
+
+    <form id="form1" runat="server">
+     
+          <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+         <ul class="nav" id="top-navigation">
+                            <li ><a href="../DersliklereDagit.aspx">Dersliklere Dağıt</a></li>
+                           <!-- <li><a href="#service">Services</a></li> -->
+                            <li><a href="../sinifListeleri/SinifListeleri.aspx">Sınıf Listeleri</a></li>
+                           <!-- <li><a href="#about">Hakkımda</a></li>
+                            <li><a href="#clients">İletişim</a></li>
+                            <!--<li><a href="#price">Price</a></li>-->
+                           <!-- <li><a href="#contact">Mesaj Gönderin</a></li>-->
+                        </ul>
+             </div>
+                    <!-- End main navigation -->
+                </div>
+            </div>
+        </div>
+       
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        </asp:ContentPlaceHolder>
+            
+
+    </div>
+        
+    </form>
+    
+  
+</body>
+    
+</html>

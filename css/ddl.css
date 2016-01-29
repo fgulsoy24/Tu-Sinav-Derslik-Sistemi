@@ -1,0 +1,19 @@
+﻿body {
+}
+
+        .ddl
+        {
+            border:1px solid #7d6754;
+            border-radius:5px;
+            padding:3px;
+            -webkit-appearance: none; 
+            background-image: url(/images/Nggfj.gif);
+            background-position:245px;
+            background-repeat:no-repeat;
+            text-indent: 0.01px;/*In Firefox*/
+            text-overflow: '';/*In Firefox*/
+            
+        }
+    
+
+
