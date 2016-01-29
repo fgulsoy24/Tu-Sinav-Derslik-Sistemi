@@ -5,40 +5,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="~/css/login.css" />
+   
+
+
 </head>
+
 <body>
-    <a href="OgrenciKayit.aspx"> SANALKURS.NET </a>
-    <form id="form1" runat="server">
-    <div>
-    
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-    
-    </div>
-          
+    <div id="login">
+  
+<div id="triangle"></div>
+ <h1>Log in</h1>
+     <form id="form1" runat="server">
 
-      <asp:gridview id="CustomersGridView" 
-        datasourceid="CustomersSource" 
-        autogeneratecolumns="true"
-        emptydatatext="No data available." 
-        runat="server">
+  
+ 
+         <asp:TextBox ID="txtUsername" runat="server" placeholder="username" CssClass="textbox"></asp:TextBox>
+   <asp:TextBox ID="txtPassword" runat="server" placeholder="password" CssClass="textbox" ></asp:TextBox>
+   
+     <asp:Button ID="loginButton" runat="server" Text="Giriş" OnClick="loginButton_Click1" Width="341px" />
+ 
+</div>
+ 
 
-        <rowstyle backcolor="LightCyan"  
-           forecolor="DarkBlue"
-           font-italic="true"/>
+     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-        <alternatingrowstyle backcolor="PaleTurquoise"  
-          forecolor="DarkBlue"
-          font-italic="true"/>
+ <script src="~/js/index.js"></script>
 
-      </asp:gridview>
-
-       
-        <p>
-           
-
-           
-        </p>
-    </form>
+         </form>
 </body>
 </html>

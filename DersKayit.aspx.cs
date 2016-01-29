@@ -16,11 +16,14 @@ public partial class DersKayit : System.Web.UI.Page
     Fonksiyonlar vt = new Fonksiyonlar();
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        if (Session["username"] != null)
+            Thread.Sleep(1);
+        else
+            Response.Redirect("Default.aspx");
     }
     protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-     
+
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -36,10 +39,9 @@ public partial class DersKayit : System.Web.UI.Page
             this.lbldurum.Text = "Bu ders koduna ait Ders Bulunmaktadır. Lütfen Ders Kodunu değiştiriniz.";
             Response.Redirect("DersKayit.aspx");
             return;
-            
+
         }
         else
-
         {
             SqlCommand cmd = new SqlCommand("insert into dersler (ders_id, ders_adi,bolum_id) Values(@ders_id,@ders_adi,@bolum_id)", baglan);
             cmd.Parameters.Add("ders_id", TextBox1.Text);
@@ -48,36 +50,22 @@ public partial class DersKayit : System.Web.UI.Page
 
             cmd.ExecuteNonQuery();
 
-            
-           
 
-            lblbasari.Text = "Ders Kaydı Başarılı.";
-            
+
+
+            Response.Write("<script lang='JavaScript'> alert ('Bu Derse Ait Sınav Kaydı Bulunamadı.');</script>");
+
+            Response.Redirect("DersKayit.aspx");
+
             cmd.Dispose();
-            
+
             baglan.Close();
             baglan.Dispose();
             return;
-            
+
 
         }
-       
-    }            
-    
-    protected void Button2_Click(object sender, EventArgs e)
-    {
-        SqlConnection baglan = vt.baglan();
-        for (int i = 0; i < CheckBoxList1.Items.Count; i++)
-        {
-            if (CheckBoxList1.Items[i].Selected)
-            {
-                
-                SqlCommand cmd = new SqlCommand("delete from dersler where ders_id = '"+CheckBoxList1.Items[i].Value+"'", baglan);
-                cmd.ExecuteNonQuery();
-                
-            }
-        }
-        Response.Redirect("DersKayit.aspx");
-        baglan.Close();
-}
+
+    }
+
 }

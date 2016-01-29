@@ -11,12 +11,16 @@ using System.Configuration;
 using System.Collections;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Parameters;
+using System.Threading;
 public partial class DersliklereDagit : System.Web.UI.Page
 {
     Fonksiyonlar vt = new Fonksiyonlar();
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["username"] != null)
+            Thread.Sleep(1);
+        else
+            Response.Redirect("Default.aspx");
 
        
     }
@@ -36,7 +40,7 @@ public partial class DersliklereDagit : System.Web.UI.Page
      komut.Parameters.AddWithValue("tarih", DropDownList6.SelectedValue);
 
      int derssayisi = (int)komut.ExecuteScalar();
-     if (derssayisi < 1)
+        if (derssayisi < 1)
      {  
              Response.Write("<script lang='JavaScript'> alert ('Bu Derse Ait Sınav Kaydı Bulunamadı.');</script>");
              

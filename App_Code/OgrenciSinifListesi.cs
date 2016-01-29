@@ -83,6 +83,8 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo2 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
             DevExpress.DataAccess.Sql.RelationInfo relationInfo3 = new DevExpress.DataAccess.Sql.RelationInfo();
             DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo3 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
+            DevExpress.DataAccess.Sql.RelationInfo relationInfo4 = new DevExpress.DataAccess.Sql.RelationInfo();
+            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo4 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
             DevExpress.DataAccess.Sql.TableInfo tableInfo1 = new DevExpress.DataAccess.Sql.TableInfo();
             DevExpress.DataAccess.Sql.ColumnInfo columnInfo1 = new DevExpress.DataAccess.Sql.ColumnInfo();
             DevExpress.DataAccess.Sql.ColumnInfo columnInfo2 = new DevExpress.DataAccess.Sql.ColumnInfo();
@@ -96,6 +98,8 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             DevExpress.DataAccess.Sql.TableInfo tableInfo4 = new DevExpress.DataAccess.Sql.TableInfo();
             DevExpress.DataAccess.Sql.ColumnInfo columnInfo8 = new DevExpress.DataAccess.Sql.ColumnInfo();
             DevExpress.DataAccess.Sql.ColumnInfo columnInfo9 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.TableInfo tableInfo5 = new DevExpress.DataAccess.Sql.TableInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo10 = new DevExpress.DataAccess.Sql.ColumnInfo();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
@@ -152,10 +156,17 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             relationColumnInfo3});
             relationInfo3.NestedTable = "Dersler";
             relationInfo3.ParentTable = "Sinavlar";
+            relationColumnInfo4.NestedKeyColumn = "derslik_id";
+            relationColumnInfo4.ParentKeyColumn = "derslik_id";
+            relationInfo4.KeyColumns.AddRange(new DevExpress.DataAccess.Sql.RelationColumnInfo[] {
+            relationColumnInfo4});
+            relationInfo4.NestedTable = "Derslik";
+            relationInfo4.ParentTable = "ogr_sinav_derslik";
             tableQuery1.Relations.AddRange(new DevExpress.DataAccess.Sql.RelationInfo[] {
             relationInfo1,
             relationInfo2,
-            relationInfo3});
+            relationInfo3,
+            relationInfo4});
             tableInfo1.Name = "ogr_sinav_derslik";
             columnInfo1.Name = "ogr_no";
             columnInfo2.Name = "Sinav_id";
@@ -183,11 +194,16 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             tableInfo4.SelectedColumns.AddRange(new DevExpress.DataAccess.Sql.ColumnInfo[] {
             columnInfo8,
             columnInfo9});
+            tableInfo5.Name = "Derslik";
+            columnInfo10.Name = "derslik_adi";
+            tableInfo5.SelectedColumns.AddRange(new DevExpress.DataAccess.Sql.ColumnInfo[] {
+            columnInfo10});
             tableQuery1.Tables.AddRange(new DevExpress.DataAccess.Sql.TableInfo[] {
             tableInfo1,
             tableInfo2,
             tableInfo3,
-            tableInfo4});
+            tableInfo4,
+            tableInfo5});
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             tableQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -264,9 +280,8 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell8
             // 
             this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.derslik_id")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.derslik_adi")});
             this.xrTableCell8.Name = "xrTableCell8";
-            this.xrTableCell8.Text = "xrTableCell8";
             this.xrTableCell8.Weight = 1D;
             // 
             // Title

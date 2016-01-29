@@ -2957,6 +2957,7 @@ button.btn,
 input[type="submit"].btn {
   *padding-top: 3px;
   *padding-bottom: 3px;
+    height: 29px;
 }
 
 button.btn::-moz-focus-inner,

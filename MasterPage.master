@@ -6,7 +6,8 @@
 <head runat="server">
       <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
      <link rel="stylesheet" type="text/css" href="css/bootstrap1.css" />
-
+     
+    <script src="JS/bootstrap.js"></script>
       
      
         <!--[if IE 7]>
@@ -21,9 +22,19 @@
     <asp:ContentPlaceHolder id="head" runat="server">
   
     </asp:ContentPlaceHolder>
+      </head>
+    <form id="form1" runat="server">
  <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
-  <h1 style="font-family: 'Habibi', serif; color: #696060;" > &nbsp SINAV DERSLİK OTOMASYONU</h1>
-</head>
+        
+        <link rel="stylesheet" type="text/css" href="~/css/login.css" />
+ <h2 style="font-family: 'Habibi', serif; color: #696060;" > &nbsp;&nbsp; SINAV DERSLİK OTOMASYONU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <asp:Button ID="logoutButton" runat="server" Text="Çıkış" CausesValidation="false" OnClick="logoutButton_Click1" Height="30px" Width="78px" CssClass="button" />
+
+   
+
+        </h2>  
+
+   
+
 <body>
     <style> body {
     background-image: url("../images/photography.png");
@@ -33,19 +44,19 @@
 
 }</style>
 
-    <form id="form1" runat="server">
+    
      
           <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
          <ul class="nav" id="top-navigation">
                             <li ><a href="../DersliklereDagit.aspx">Dersliklere Dağıt</a></li>
-                           <!-- <li><a href="#service">Services</a></li> -->
+                           <!-- <li><a href="../DerslikKayit.aspx">Services</a></li> -->
                             <li><a href="../sinifListeleri/SinifListeleri.aspx">Sınıf Listeleri</a></li>
-                           <!-- <li><a href="#about">Hakkımda</a></li>
-                            <li><a href="#clients">İletişim</a></li>
-                            <!--<li><a href="#price">Price</a></li>-->
-                           <!-- <li><a href="#contact">Mesaj Gönderin</a></li>-->
+                            <li><a href="../DersKayit.aspx">Ders Kayıt</a></li>
+                            <li><a href="../SinavKayit.aspx">Sınav Kayıt</a></li>
+                            <li><a href="../EkranListesi/Tvlist.aspx">Ekran Listesi</a></li>
+                            <li><a href="../DerslikKayit.aspx">Derslik Kayıt</a></li>
                         </ul>
              </div>
                     <!-- End main navigation -->

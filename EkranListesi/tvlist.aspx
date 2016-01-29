@@ -1,4 +1,5 @@
-﻿    <%@ Page MasterPageFile="~/MasterPage.master" Language="C#" AutoEventWireup="true" CodeFile="DersliklereDagit.aspx.cs" Inherits="DersliklereDagit"  %>
+﻿<%@ Page MasterPageFile="~/MasterPage.master" Language="C#" AutoEventWireup="true" CodeFile="tvlist.aspx.cs" Inherits="EkranListesi_tvlist" %>
+
 <%@ Register Assembly="DevExpress.Web.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     
@@ -49,7 +50,7 @@
 
     
     <div class="container" >
-    <h2 style="font-family: 'Habibi', serif;">Dersliklere Dağıt </h2>
+    <h2 style="font-family: 'Habibi', serif;">Ekran Görüntüsü Oluştur </h2>
         </div>
     <div class="container" style="font-family:Asap;" >
     
@@ -93,16 +94,11 @@
         </div>
          
     <div class="container" style="font-family: Asap;">
-        <h5>* Derslik / Kapasite </h5>
+      
             <asp:SqlDataSource ID="derslikdatasource" runat="server" ConnectionString="<%$ ConnectionStrings:Tu_SinavConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT derslik_id AS derslik_id, derslik_adi + SPACE(2)  +'(' + CONVERT(varchar(4), Derslik_kapasite)+ ')' AS derslikadi , derslik_kapasite AS Expr3 FROM Derslik"></asp:SqlDataSource>
         
-        <div class="checkbox">
-            <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="DerslikDatasource" DataTextField="derslikadi" DataValueField="derslik_id" Width="300px" RepeatColumns="3">
-            </asp:CheckBoxList>
-        </div>
-         
      
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Dağıt"  Font-Size="11"  CssClass="btn btn-primary btn-lg"  /> 
+       
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Listele" Font-Size="11"  CssClass="btn btn-primary btn-lg" />
         
     </div>

@@ -19,10 +19,10 @@
         Sorgulama Motoru Ders Seç
        
         
-        <dx:ASPxDocumentViewer ID="ASPxDocumentViewer1" runat="server" ReportTypeName="XtraReport1" Theme="Office2010Blue">
+        <dx:ASPxDocumentViewer ID="ASPxDocumentViewer1" runat="server" ReportTypeName="XtraReport1" Theme="Office2010Blue" ToolbarMode="Ribbon">
         </dx:ASPxDocumentViewer>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Tu_SinavConnectionString %>" SelectCommand="SELECT [ders_id], [ders_adi] FROM [Dersler]"></asp:SqlDataSource>
-    
+        <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Slider Oluştur." OnClick="ASPxButton1_Click"></dx:ASPxButton>
     </div>
       
     </form>

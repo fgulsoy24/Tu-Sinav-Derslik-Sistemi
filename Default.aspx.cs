@@ -13,18 +13,15 @@ public partial class _Default : System.Web.UI.Page
     {
 
 
+    }
+   
+    protected void Button1_Click1(object sender, EventArgs e)
+    {
 
     }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void loginButton_Click1(object sender, EventArgs e)
     {
-        /* DataTable dt = vt.GetDataTable("select * from Ogrenci where ogr_no = '" + TextBox1.Text + "' ");
-         for (int i = 0; i < dt.Rows.Count; i++)
-         {
-             DataRow dr = dt.Rows[i];
-             Response.Write(dr["ogr_adi"].ToString() + "<br />");
-
-         }
-
-     }*/
+        Session["username"] = txtUsername.Text;
+        Response.Redirect("DersliklereDagit.aspx");
     }
 }

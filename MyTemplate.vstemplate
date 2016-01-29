@@ -1,12 +1,12 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>OkulProje</Name>
+    <Name>T.Ü Sınav Sistemi</Name>
     <Description>&lt;No description available&gt;</Description>
     <ProjectType>Web</ProjectType>
     <ProjectSubType>CSharp</ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>OkulProje</DefaultName>
+    <DefaultName>T.Ü Sınav Sistemi</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
@@ -16,9 +16,14 @@
     <Project TargetFileName="ProjectName.webproj" File="ProjectName.webproj" ReplaceParameters="true">
       <Folder Name="App_Code" TargetFolderName="App_Code">
         <ProjectItem ReplaceParameters="true" TargetFileName="Fonksiyonlar.cs">Fonksiyonlar.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="LessonModel.cs">LessonModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="OgrenciSinifListesi.cs">OgrenciSinifListesi.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SinifListesi.cs">SinifListesi.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="TvListReport.cs">TvListReport.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Users.cs">Users.cs</ProjectItem>
+      </Folder>
+      <Folder Name="App_Data" TargetFolderName="App_Data">
+        <Folder Name="UploadTemp" TargetFolderName="UploadTemp" />
       </Folder>
       <Folder Name="App_GlobalResources" TargetFolderName="App_GlobalResources">
         <ProjectItem ReplaceParameters="true" TargetFileName="OgrenciSinifListesi.resx">OgrenciSinifListesi.resx</ProjectItem>
@@ -136,8 +141,10 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap1.css">bootstrap1.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="colors.css">colors.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ddl.css">ddl.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="easycal.css">easycal.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="jquery.bxslider.css">jquery.bxslider.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="jquery.cslider.css">jquery.cslider.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="login.css">login.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="pluton-ie7.css">pluton-ie7.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="pluton.css">pluton.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="style.css">style.css</ProjectItem>
@@ -146,6 +153,8 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.cs">Default.aspx.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="DersKayit.aspx">DersKayit.aspx</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="DersKayit.aspx.cs">DersKayit.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="DerslikKayit.aspx">DerslikKayit.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="DerslikKayit.aspx.cs">DerslikKayit.aspx.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="DersliklereDagit.aspx">DersliklereDagit.aspx</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="DersliklereDagit.aspx.cs">DersliklereDagit.aspx.cs</ProjectItem>
       <Folder Name="EkranListesi" TargetFolderName="EkranListesi">
@@ -161,13 +170,27 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.woff">glyphicons-halflings-regular.woff</ProjectItem>
       </Folder>
       <Folder Name="images" TargetFolderName="images">
-        <ProjectItem ReplaceParameters="false" TargetFileName="Nggfj.gif">Nggfj.gif</ProjectItem>
+        <Folder Name="vstg0001" TargetFolderName="BİLGİSAYAR MÜHENDİSLİĞİNE GİRİŞoluşturmatarih2015-05-30_06-42-32-">
+          <ProjectItem ReplaceParameters="false" TargetFileName="BİLGİSAYAR MÜHENDİSLİĞİNE GİRİŞtvlist1.png">vstg0002.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="BİLGİSAYAR MÜHENDİSLİĞİNE GİRİŞtvlist2.png">vstg0003.png</ProjectItem>
+        </Folder>
+        <Folder Name="vstg0004" TargetFolderName="DOĞRUSAL CEBİRoluşturmatarih2015-05-30_06-42-55-">
+          <ProjectItem ReplaceParameters="false" TargetFileName="DOĞRUSAL CEBİRtvlist1.png">vstg0005.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DOĞRUSAL CEBİRtvlist2.png">vstg0006.png</ProjectItem>
+        </Folder>
+        <Folder Name="vstg0007" TargetFolderName="DOĞRUSAL CEBİRoluşturmatarih2015-05-30_06-44-01-">
+          <ProjectItem ReplaceParameters="false" TargetFileName="DOĞRUSAL CEBİRtvlist1.png">vstg0008.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="DOĞRUSAL CEBİRtvlist2.png">vstg0009.png</ProjectItem>
+        </Folder>
         <ProjectItem ReplaceParameters="false" TargetFileName="photography.png">photography.png</ProjectItem>
       </Folder>
       <Folder Name="js" TargetFolderName="js">
         <ProjectItem ReplaceParameters="true" TargetFileName="app.js">app.js</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.js">bootstrap.js</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.js">bootstrap.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="dataset.js">dataset.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="easycal.js">easycal.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.js">index.js</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="jquery.bxslider.js">jquery.bxslider.js</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="jquery.cslider.js">jquery.cslider.js</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="jquery.inview.js">jquery.inview.js</ProjectItem>
@@ -185,12 +208,17 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="OgrenciKayit.aspx.cs">OgrenciKayit.aspx.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="OgrenciListele.aspx">OgrenciListele.aspx</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="OgrenciListele.aspx.cs">OgrenciListele.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SinavKayit.aspx">SinavKayit.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SinavKayit.aspx.cs">SinavKayit.aspx.cs</ProjectItem>
       <Folder Name="SinifListeleri" TargetFolderName="SinifListeleri">
         <ProjectItem ReplaceParameters="true" TargetFileName="SinifListe.aspx">SinifListe.aspx</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SinifListe.aspx.cs">SinifListe.aspx.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SinifListeleri.aspx">SinifListeleri.aspx</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SinifListeleri.aspx.cs">SinifListeleri.aspx.cs</ProjectItem>
       </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Tvlistslider.aspx">Tvlistslider.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Tvlistslider.aspx.cs">Tvlistslider.aspx.cs</ProjectItem>
+      <Folder Name="UserForms" TargetFolderName="UserForms" />
       <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
     </Project>
